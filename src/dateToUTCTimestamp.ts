@@ -15,17 +15,11 @@ const dateToUTCTimestamp = (date: Date): number =>
   );
 
 /**
- *
- * @param {Date} date The date whose 
- * @param locales
- * @param options
- * @returns
+ * Gets the utc date string equivalent of the date. Doesn't convert the date to UTC but just drops the timezone
+ * @param date The date whose UTC date string is to be calculated
+ * @returns {string} 
  */
-const dateToUTCString = (
-  date: Date,
-  locales?: Intl.LocalesArgument,
-  options?: Intl.DateTimeFormatOptions
-): string =>
-  new Date(dateToUTCTimestamp(date)).toLocaleDateString(locales, options);
+const dateToUTCString = (date: Date): string =>
+  new Date(dateToUTCTimestamp(date)).toUTCString();
 
 export { dateToUTCTimestamp, dateToUTCString };

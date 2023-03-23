@@ -1,2 +1,2 @@
 export * from "./dateToUTCTimestamp";
-export * from "./daysInAMonth";
+export * from "./daysInMonth";
