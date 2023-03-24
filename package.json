@@ -1,10 +1,21 @@
 {
   "name": "date-fns-utils",
+  "description": "A collections of utils to work with date functions.",
   "version": "0.0.1",
   "license": "MIT",
   "type": "module",
   "source": "src/index.ts",
   "types": "./dist/index.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "repository": "dennisja/date-fns-utils",
+  "keywords": [
+    "dates",
+    "date-fns",
+    "Date"
+  ],
   "exports": {
     "require": "./dist/index.cjs",
     "default": "./dist/index.modern.js"
@@ -14,9 +25,13 @@
   "unpkg": "./dist/index.umd.js",
   "scripts": {
     "build": "microbundle",
-    "dev": "microbundle watch"
+    "dev": "microbundle watch",
+    "changeset": "changeset",
+    "release": "yarn build && changeset publish"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.1",
     "microbundle": "^0.15.1",
     "typescript": "^5.0.2"
   }
