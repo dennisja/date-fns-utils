@@ -27,7 +27,8 @@
     "build": "microbundle",
     "dev": "microbundle watch",
     "changeset": "changeset",
-    "release": "yarn build && changeset publish"
+    "prerelease": "yarn build",
+    "release": "changeset publish"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
